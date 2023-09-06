@@ -105,14 +105,6 @@
 				background-size: 100% 100%;
 			}
 		}
-		
-		.tab-bar {
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			
-		}
 
 	}
 	

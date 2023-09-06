@@ -1,4 +1,4 @@
-import {mapState} from 'vuex';
+import {mapState, mapMutations} from 'vuex';
 export default {
 	data() {
 		return {
@@ -17,14 +17,18 @@ export default {
 	mounted() {
 		this.activeBar = this.$store.state.activeBar;
 		this.tabBarList = this.$store.state.tabBarList;
-		console.log(this.$store.state.tabBarList,888)
 	},
 	
 	methods: {
+		...mapMutations({
+			updateActiveBar: 'updateActiveBar'
+		}),
 		switchBar(item) {
 			uni.switchTab({
 				url: `/${item.pagePath}`
 			});
+			this.updateActiveBar(item.name);
+			
 		}
 	}
 }
