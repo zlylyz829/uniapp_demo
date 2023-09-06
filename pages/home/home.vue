@@ -51,10 +51,18 @@
 			// })
 		},
 		
-		mounted() {
+		onShow() {
 			console.log(this.$store.state.activeBar, 555)
 			this.activeBar = this.$store.state.activeBar;
 			this.tabBarList = this.$store.state.tabBarList;
+			uni.setNavigationBarTitle({
+				title: '丽丽洗衣'
+			});
+			// uni.setBackgroundColor({
+			//     backgroundColor: '#ffffff',
+			//     backgroundColorTop: '#222222',
+			//     backgroundColorBottom: '#333333'
+			// });
 		},
 
 		methods: {

@@ -20,7 +20,9 @@
 		},
 		
 		onShow() {
-			
+			uni.setNavigationBarTitle({
+				title: '个人中心'
+			});
 		}
 	}
 </script>

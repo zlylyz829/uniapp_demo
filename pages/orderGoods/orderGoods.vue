@@ -18,7 +18,9 @@
 		},
 		
 		onShow() {
-			
+			uni.setNavigationBarTitle({
+				title: '订单'
+			});
 		}
 	}
 </script>
