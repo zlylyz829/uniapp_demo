@@ -1,8 +1,8 @@
 <template>
 	<div id="tab-bar">
-		<div class="tab-item" v-for="(item, index) in tabBarList" :key="item.text" @click="switchBar(item)">
+		<div class="tab-item" v-for="(item, index) in $store.state.tabBarList" :key="item.text" @click="switchBar(item)">
 			<div class="img">
-				<img :src="activeBar === item.name? `../../static/Icon/svg/${item.selectedIconPath}` : `../../static/Icon/svg/${item.iconPath}`" alt="">
+				<img :src="$store.state.activeBar === item.name? `../../static/Icon/svg/${item.selectedIconPath}` : `../../static/Icon/svg/${item.iconPath}`" alt="">
 			</div>
 			<div>{{item.text}}</div>
 		</div>
